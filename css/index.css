@@ -1,0 +1,361 @@
+/* Sidebar (for mobile & tablet) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  z-index: 1050;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu .nav-link {
+  display: block;
+  padding: 12px 10px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.side-menu .nav-link:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Overlay effect when menu opens */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  z-index: 1049;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide side menu and overlay on desktop */
+@media (min-width: 992px) {
+  .side-menu,
+  .overlay {
+    display: none !important;
+  }
+}
+
+
+#nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+#nav-links .nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#nav-links .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+#nav-links .nav-link:hover::after {
+    width: 100%;
+}
+
+#nav-links .nav-link:hover {
+    color: #007bff !important;
+}
+
+.navbar-brand{
+  flex-grow: 1;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-toggler {
+    padding: 0.10rem 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width:320px){
+  .navbar-brand{
+    font-size: 0.8rem;
+  }
+}
+ 
+.navbar-toggler{
+  margin-left: auto;
+  position:relative;
+  top: o;
+}
+
+.hero-section {
+    height: 80vh; 
+    background: url("../Images/hero-section.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+.services-section {
+  background-color: #f3f6fb;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.service-img {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.founders-section {
+  background-color: #f8f9fa;
+}
+
+.founder-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card img {
+  object-fit: cover;
+  border: 4px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+
+
+.founders-section h2 {
+  color: #000;
+  font-size: 2.5rem;
+}
+
+.founder-card h4 {
+  color: #000;
+}
+
+.founder-card p {
+  color: #555;
+}
+
+.feedback-section h2 {
+  color: #222;
+}
+
+.feedback-section form {
+  border-radius: 12px;
+}
+
+.feedback-section input, 
+.feedback-section textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.feedback-section input:focus,
+.feedback-section textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* ⭐ Star Rating */
+.rating {
+  direction: rtl; /* right to left for reverse star filling */
+  display: inline-flex;
+  gap: 5px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.rating input:checked ~ label {
+  color: #ffc107;
+}
+
+
+.feedback-section button {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.feedback-section button:hover {
+  background-color: #0056b3;
+}
+
+
+ body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #444;
+    }
+
+    .review-section {
+      background: white;
+      color: black;
+      text-align: center;
+      padding: 70px 20px 100px;
+      border-radius: 0 0 60px 60px;
+    }
+
+    .review-box {
+      background: #fff;
+      color: #555;
+      max-width: 800px;
+      margin: -60px auto 50px;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      min-height: 340px;
+      text-align: center;
+      opacity: 1;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    .review-text {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #666;
+    }
+
+    .review-author {
+      margin-top: 25px;
+    }
+
+    .review-author img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .review-author h5 {
+      font-weight: 600;
+      margin: 0;
+      color: #333;
+    }
+
+    .review-author span {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .review-rating {
+      margin: 15px 0;
+      color: #f4b400;
+      font-size: 20px;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 0px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #4b2b28;
+    }
+
+.footer{
+  margin-top: 20px;
+}    
+
+.footer a {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff;
+}

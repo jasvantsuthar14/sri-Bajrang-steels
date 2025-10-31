@@ -1,0 +1,250 @@
+/* Sidebar (for mobile & tablet) */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  z-index: 1050;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu .nav-link {
+  display: block;
+  padding: 12px 10px;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.side-menu .nav-link:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Overlay effect when menu opens */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+  z-index: 1049;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hide side menu and overlay on desktop */
+@media (min-width: 992px) {
+  .side-menu,
+  .overlay {
+    display: none !important;
+  }
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-links {
+    display: flex;
+    gap: 20px; 
+}
+
+#nav-links .nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#nav-links .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+#nav-links .nav-link:hover::after {
+    width: 100%;
+}
+
+#nav-links .nav-link:hover {
+    color: #007bff !important;
+}
+
+.navbar-brand{
+  flex-grow: 1;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-toggler {
+    padding: 0.10rem 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width:320px){
+  .navbar-brand{
+    font-size: 0.8rem;
+  }
+}
+ 
+.navbar-toggler{
+  margin-left: auto;
+  position:relative;
+  top: o;
+}
+
+
+form input, form textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+ body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, white, #f4f4f4);
+      color: #333;
+      min-height: 100vh;
+      
+    }
+
+    .contact-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      margin-top: 1.5px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .contact-header h2 {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .contact-header p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    .form-control {
+      background: rgba(255,255,255,0.7);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 14px;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+      border: none;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #0062cc, #00aaff);
+    }
+
+    .contact-info {
+      margin-top: 40px;
+    }
+
+    .contact-info i {
+      font-size: 22px;
+      color: #007bff;
+      margin-right: 12px;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #007bff;
+    }
+
+    iframe {
+      border-radius: 15px;
+      border: none;
+      width: 100%;
+      height: 300px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 768px) {
+      .contact-container {
+        padding: 25px;
+      }
+    }
+
+
+.footer a {
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #007bff;
+}
