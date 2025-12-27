@@ -27,8 +27,8 @@
       {
         text: "We have been utilizing services of Web SEO Services for a year now; the on-ground support is actually unbeatable, quick and reliable.",
         img: "https://i.pravatar.cc/100?img=12",
-        name: "Munshi Ji",
-        role: "CEO - YR Gamer",
+        name: "Dinesh",
+        role: "CEO - MDM",
         rating: 5
       },
       {
@@ -48,8 +48,8 @@
       {
         text: "We have been utilizing services of Web SEO Services for a year now; the on-ground support is actually unbeatable, quick and reliable.",
         img: "https://i.pravatar.cc/100?img=12",
-        name: "Munshi Ji",
-        role: "CEO - YR Gamer",
+        name: "Jitendra ",
+        role: "CEO - SKG GAMER",
         rating: 5
       }
     ];
