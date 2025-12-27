@@ -55,6 +55,10 @@
   }
 }
 
+.navbar{
+  position: fixed;
+  width: 100%;
+}
 
 #nav-links {
     display: flex;
@@ -366,3 +370,19 @@
 .footer a:hover {
   color: #007bff;
 }
+
+.whatsapp-float{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background:#25D366;
+  padding:10px;
+  border-radius:50%;
+  box-shadow:0 2px 8px rgba(0,0,0,.3);
+}
+
+.whatsapp-float img{
+  width:40px;
+}
+
